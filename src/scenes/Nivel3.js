@@ -99,7 +99,7 @@ export default class Juego extends Phaser.Scene {
       this.jugador,
       this.salida,
       this.esVencedor,
-      () => this.cantidadEstrellas >= 1, // condicion de ejecucion
+      () => this.cantidadEstrellas >= 5, // condicion de ejecucion
       this
     );
 
@@ -155,6 +155,9 @@ export default class Juego extends Phaser.Scene {
     if (this.cursors.up.isDown && this.jugador.body.blocked.down) {
       this.jugador.setVelocityY(-330);
     }
+    if (this.cursors.down.isDown) {
+      this.jugador.setVelocityY(200);
+      }
   }
 
   recolectarEstrella(jugador, estrella) {
@@ -180,8 +183,6 @@ export default class Juego extends Phaser.Scene {
 
     this.scene.start("fin", {
       cantidadEstrellas: this.cantidadEstrellas,
-      y: "este es un dato de muestra",
-      z: "este es otro atributo enviado a otro escena",
     });
   }
 }

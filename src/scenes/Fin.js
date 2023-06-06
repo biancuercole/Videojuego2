@@ -8,15 +8,30 @@ export default class Fin extends Phaser.Scene {
   }
 
   init(data) {
-    // this is called before the scene is created
-    // init variables
-    // take data passed from other scenes
-    // data object param {}
+
     console.log(data);
     this.cantidadEstrellas = data.cantidadEstrellas;
   }
 
+  preload() {
+    this.load.image("fin", "./public/images/fin.png");
+    this.load.image("reintentar", "./public/images/reintentar.png");
+  }
   create() {
+    this.add.image(400, 300, "fin").setScale(0.24);
+    const button = this.add.image(400, 340, "reintentar").setScale(0.20).setInteractive();
+    button.on("pointerover", () => {
+      this.game.canvas.style.cursor = "pointer"
+    });
+
+    button.on("pointerout", () => {
+      this.game.canvas.style.cursor = "default";
+    });
+  
+    button.on("pointerdown", () => {
+      this.game.canvas.style.cursor = "default";
+      this.scene.start("precarga");
+    });
     this.cantidadEstrellasTexto = this.add.text(
       15,
       15,
