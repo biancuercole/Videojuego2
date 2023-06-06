@@ -4,7 +4,7 @@ export default class Juego extends Phaser.Scene {
   constructor() {
     // key of the scene
     // the key will be used to start the scene by other scenes
-    super("nivel2");
+    super("nivel3");
   }
 
   init(data) {
@@ -14,13 +14,13 @@ export default class Juego extends Phaser.Scene {
     // data object param {}
 
     console.log(data);
-    this.nivel = 2;
+    this.nivel = 3;
     this.cantidadEstrellas = data.cantidadEstrellas || 0;
   }
 
   create() {
     // todo / para hacer: texto de puntaje
-    const map = this.make.tilemap({ key: "map2" });
+    const map = this.make.tilemap({ key: "map3" });
 
     // Parameters are the name you gave the tileset in Tiled and then the key of the tileset image in
     // Phaser's cache (i.e. the name you used in preload)
