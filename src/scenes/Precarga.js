@@ -11,18 +11,22 @@ export default class Precarga extends Phaser.Scene {
     this.load.tilemapTiledJSON("map1", "./public/tilemaps/nivel1.json");
     this.load.tilemapTiledJSON("map2", "./public/tilemaps/nivel2.json");
     this.load.tilemapTiledJSON("map3", "./public/tilemaps/nivel3.json");
-
     this.load.image("tilesFondo", "./public/images/sky.png");
     this.load.image("tilesPlataforma", "./public/images/platform.png");
-
     this.load.image("star", "./public/images/star.png");
-
     this.load.spritesheet("dude", "./public/images/dude.png", {
       frameWidth: 32,
       frameHeight: 48,
     });
-
     this.load.image("salida", "./public/images/salida.png");
+    this.load.image("fondo", "./public/images/menu.png");
+    this.load.image("jugar", "./public/images/boton.png");
+    this.load.image("moncho", "./public/images/moncho.png");
+    this.load.image("nube", "./public/images/nube.png");
+    this.load.image("instrucciones", "./public/images/instrucciones.png");
+    this.load.image("comenzar", "./public/images/comenzar.png");
+    this.load.image("fin", "./public/images/fin.png");
+    this.load.image("reintentar", "./public/images/reintentar.png");
   }
 
   create() {
@@ -49,6 +53,6 @@ export default class Precarga extends Phaser.Scene {
     });
 
     // init scene juego
-    this.scene.start("nivel1");
+    this.scene.start("menu");
   }
 }

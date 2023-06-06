@@ -13,10 +13,7 @@ export default class Fin extends Phaser.Scene {
     this.cantidadEstrellas = data.cantidadEstrellas;
   }
 
-  preload() {
-    this.load.image("fin", "./public/images/fin.png");
-    this.load.image("reintentar", "./public/images/reintentar.png");
-  }
+  preload() {}
   create() {
     this.add.image(400, 300, "fin").setScale(0.24);
     const button = this.add.image(400, 340, "reintentar").setScale(0.20).setInteractive();
@@ -30,7 +27,7 @@ export default class Fin extends Phaser.Scene {
   
     button.on("pointerdown", () => {
       this.game.canvas.style.cursor = "default";
-      this.scene.start("precarga");
+      this.scene.start("nivel1");
     });
     this.cantidadEstrellasTexto = this.add.text(
       15,

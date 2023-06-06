@@ -6,12 +6,7 @@ export default class Menu extends Phaser.Scene {
     }
 
     init() {}
-    preload() {
-        this.load.image("fondo", "./public/images/menu.png");
-        this.load.image("jugar", "./public/images/boton.png");
-        this.load.image("moncho", "./public/images/moncho.png");
-        this.load.image("nube", "./public/images/nube.png");
-    }
+    preload() {}
     create() {
         this.add.image(400, 300, "fondo").setScale(0.24);
         this.add.image(50, 200, "nube").setScale(0.40);

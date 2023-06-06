@@ -6,10 +6,7 @@ export default class Instrucciones extends Phaser.Scene {
     }
 
     init() {}
-    preload() {
-        this.load.image("instrucciones", "./public/images/instrucciones.png");
-        this.load.image("comenzar", "./public/images/comenzar.png");
-    }
+    preload() {}
     create() {
         this.add.image(400, 300, "instrucciones").setScale(0.24);
         const button= this.add.image(400, 470, "comenzar").setScale(0.22).setInteractive();
@@ -24,7 +21,7 @@ export default class Instrucciones extends Phaser.Scene {
         
         button.on("pointerdown", () => {
             this.game.canvas.style.cursor = "default";
-            this.scene.start("precarga");
+            this.scene.start("nivel1");
         });
     }   
     update() {}
