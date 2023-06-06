@@ -12,7 +12,7 @@ export default class Instrucciones extends Phaser.Scene {
     }
     create() {
         this.add.image(400, 300, "instrucciones").setScale(0.24);
-        const button= this.add.image(400, 445, "comenzar").setScale(0.22).setInteractive();
+        const button= this.add.image(400, 470, "comenzar").setScale(0.22).setInteractive();
         
         button.on("pointerover", () => {
             this.game.canvas.style.cursor = "pointer"

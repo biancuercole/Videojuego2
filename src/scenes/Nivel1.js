@@ -132,6 +132,9 @@ export default class Juego extends Phaser.Scene {
     if (this.cursors.up.isDown && this.jugador.body.blocked.down) {
       this.jugador.setVelocityY(-330);
     }
+    if (this.cursors.down.isDown) {
+    this.jugador.setVelocityY(200);
+    }
   }
 
   recolectarEstrella(jugador, estrella) {
