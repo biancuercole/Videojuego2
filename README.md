@@ -15,7 +15,7 @@ Decidí realizar las siguientes mejoras adicionales:
 - Se modificaron los tilemaps de los niveles para ubicar los elementos recolectables en distintos lugares. 
 - Se agregó una pantalla de victoria al final del juego con un boton de reiniciar que lleva al primer nivel nuevamente. 
 
-El link para acceder al juego se encuentra a continuacion: 
+El link para acceder al juego se encuentra a continuacion: https://biancuercole.github.io/Videojuego2/
 
 ¡Muchas gracias por tu interes! Ante cualquier duda contactame en biancaercole2003@gmail.com
 
